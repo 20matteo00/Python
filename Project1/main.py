@@ -45,8 +45,8 @@ while running:
                 
     # Mostra la schermata di pausa
     if paused:
-        screen.blit(pause_text, (screen_width // 2 - pause_text.get_width() // 2, screen_height // 2 - 50))
-        screen.blit(resume_text, (screen_width // 2 - resume_text.get_width() // 2, screen_height // 2))
+        display_text(pause_text, (screen_width // 2 - pause_text.get_width() // 2, screen_height // 2 - 50))
+        display_text(resume_text, (screen_width // 2 - resume_text.get_width() // 2, screen_height // 2))
         pygame.display.flip()
         clock.tick(10)  # Limita i frame in pausa
         continue  # Salta il resto del ciclo se in pausa          
@@ -63,7 +63,7 @@ while running:
 
     else:  # Fine del gioco
         screen.fill(WHITE)
-        screen.blit(victory_text, (screen_width // 2 - victory_text.get_width() // 2, screen_height // 2))
+        display_text(victory_text, (screen_width // 2 - victory_text.get_width() // 2, screen_height // 2))
         pygame.display.flip()
         pygame.time.wait(3000)
         livello = show_welcome_screen()  # Ritorna alla home screen per dare all'utente una scelta
@@ -106,16 +106,16 @@ while running:
 
     # Gestione Game Over
     if game_over:
-        screen.blit(game_over_text, (screen_width // 2 - game_over_text.get_width() // 2, screen_height // 2 - 50))
-        screen.blit(restart_text, (screen_width // 2 - restart_text.get_width() // 2, screen_height // 2))
+        display_text(game_over_text, (screen_width // 2 - game_over_text.get_width() // 2, screen_height // 2 - 50))
+        display_text(restart_text, (screen_width // 2 - restart_text.get_width() // 2, screen_height // 2))
         if keys[pygame.K_SPACE]:  # Tasto per resettare
             quad_x, quad_y = start_position  # Reset della posizione alla posizione iniziale
             game_over = False
 
     # Gestione Vittoria Livello
     if level_win:
-        screen.blit(win_text, (screen_width // 2 - win_text.get_width() // 2, screen_height // 2 - 50))
-        screen.blit(next_text, (screen_width // 2 - next_text.get_width() // 2, screen_height // 2))
+        display_text(win_text, (screen_width // 2 - win_text.get_width() // 2, screen_height // 2 - 50))
+        display_text(next_text, (screen_width // 2 - next_text.get_width() // 2, screen_height // 2))
         if keys[pygame.K_RETURN]:  # Tasto per livello successivo
             livello += 1
             hl = handle_level(livello)
@@ -127,7 +127,7 @@ while running:
                 level_started = True  # Imposta il flag per evitare di resettare la posizione continuamente
             else:  # Fine del gioco
                 screen.fill(WHITE)
-                screen.blit(victory_text, (screen_width // 2 - victory_text.get_width() // 2, screen_height // 2))
+                display_text(victory_text, (screen_width // 2 - victory_text.get_width() // 2, screen_height // 2))
                 pygame.display.flip()
                 pygame.time.wait(3000)
                 livello = show_welcome_screen()  # Ritorna alla home screen per dare all'utente una scelta

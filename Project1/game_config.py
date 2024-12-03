@@ -41,11 +41,12 @@ ball_radius = 10
 # Dettagli
 speed = 3
 num_levels = 2
+margin = screen_height // 40  # Margine
+margin_top = screen_height // 4 # Margine dall'alto
 
 # Blocchi Livelli
 blocks_per_row = 5  
-margin = 20  # Margine tra i blocchi
-start_x = 20  # Posizione di partenza sull'asse X
-start_y = 200  # Posizione di partenza sull'asse Y
+start_x = margin  # Posizione di partenza sull'asse X
+start_y = margin_top  # Posizione di partenza sull'asse Y
 block_width = (screen_width - (blocks_per_row + 1) * margin) // blocks_per_row
 block_height = screen_height // 10

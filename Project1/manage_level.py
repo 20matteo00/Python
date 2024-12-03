@@ -1,8 +1,10 @@
+from game_config import *
+
 # Livello 1
 def level1():
     title = "Livello 1"
-    start_position = (100,200)
-    total_area = [(20, 100), (780, 100), (780, 580), (20, 580)]
+    start_position = (100, 200)
+    total_area = [(margin, 100), (780, 100), (780, 580), (20, 580)]
     start_area = [(20, 100), (150, 100), (150, 580), (20, 580)]
     end_area = [(650, 100), (780, 100), (780, 580), (650, 580)]
     enemies = [(400, 300)]
@@ -12,7 +14,7 @@ def level1():
 # Livello 2
 def level2():
     title = "Livello 2"
-    start_position = (100,500)
+    start_position = (100, 500)
     total_area = [(20, 100), (780, 100), (780, 580), (20, 580)]
     start_area = [(20, 100), (200, 100), (200, 580), (20, 580)]
     end_area = [(600, 100), (780, 100), (780, 580), (600, 580)]
