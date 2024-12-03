@@ -93,4 +93,4 @@ def draw_level(title, start_area, end_area, total_area, enemies, coins):
         pygame.draw.circle(screen, BLUE, enemy, ball_radius)  # Nemici
     for coin in coins:
         pygame.draw.circle(screen, YELLOW, coin, ball_radius)  # Punto di arrivo
-    pygame.draw.polygon(screen, RED, total_area, 5)  # Bordi neri con spessore di 5 pixel
+    pygame.draw.polygon(screen, RED, total_area, 1)  # Bordi neri con spessore di 5 pixel

@@ -4,8 +4,8 @@ from game_config import *
 def level1():
     title = "Livello 1"
     start_position = (100, 200)
-    total_area = [(margin, 100), (780, 100), (780, 580), (20, 580)]
-    start_area = [(20, 100), (150, 100), (150, 580), (20, 580)]
+    total_area = [(margin, margin_top), (screen_width-margin, margin_top), (screen_width-margin, screen_height-margin), (margin, screen_height-margin)]
+    start_area = [(margin, margin_top), (margin+150, margin_top), (margin+150, screen_height-margin), (margin, screen_height-margin)]
     end_area = [(650, 100), (780, 100), (780, 580), (650, 580)]
     enemies = [(400, 300)]
     coins = [(750, 300)]
@@ -15,8 +15,8 @@ def level1():
 def level2():
     title = "Livello 2"
     start_position = (100, 500)
-    total_area = [(20, 100), (780, 100), (780, 580), (20, 580)]
-    start_area = [(20, 100), (200, 100), (200, 580), (20, 580)]
+    total_area = [(margin, margin_top), (screen_width-margin, margin_top), (screen_width-margin, screen_height-margin), (margin, screen_height-margin)]
+    start_area = [(margin, margin_top), (margin+150, margin_top), (margin+150, screen_height-margin), (margin, screen_height-margin)]
     end_area = [(600, 100), (780, 100), (780, 580), (600, 580)]
     enemies = [(300, 150), (500, 450)]
     coins = [(700, 300)]
