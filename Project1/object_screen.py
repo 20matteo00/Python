@@ -61,14 +61,14 @@ def show_level_screen():
 
 
     # Visualizzazione del testo dei livelli
-    display_text(levels_text, (screen_width // 2 - levels_text.get_width() // 2, 50))
+    display_text(levels_text, (screen_width // 2 - levels_text.get_width() // 2, margin_top-50))
 
     while running:
         screen.fill(WHITE)  # Rimuove la schermata precedente per aggiornarla
 
         # Visualizza il testo
         display_text(
-            levels_text, (screen_width // 2 - levels_text.get_width() // 2, 50)
+            levels_text, (screen_width // 2 - levels_text.get_width() // 2, margin_top-50)
         )
         # Mostra i livelli in blocchi
         for i in range(1, num_levels + 1):
