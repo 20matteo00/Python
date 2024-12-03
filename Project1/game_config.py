@@ -42,10 +42,10 @@ ball_radius = 10
 # Dettagli
 speed = 3
 grandezza_area = screen_height // 10
-difficulty = 100
-num_levels = 50
+difficulty = 5
+num_levels = 100
 margin = screen_height // 40  # Margine
-margin_top = screen_height // 4 # Margine dall'alto
+margin_top = screen_height // 8 # Margine dall'alto
 
 # Blocchi Livelli
 blocks_per_row = 5  
