@@ -41,7 +41,7 @@ ball_radius = 10
 
 # Dettagli
 speed = 3
-num_levels = 100
+num_levels = 41
 margin = screen_height // 40  # Margine
 margin_top = screen_height // 4 # Margine dall'alto
 
