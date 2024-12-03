@@ -19,7 +19,6 @@ def generate_random_position(x_min, x_max, y_min, y_max, ball_radius, previous_p
 # Livello 1
 def level(num):
     title = "Livello " + str(num)
-    grandezza_area = 150
     start_position = (margin + 50, margin_top + 50)
     total_area = [
         (margin, margin_top),
@@ -51,7 +50,7 @@ def level(num):
     previous_coin_positions = set()
 
     # Genera le posizioni per i nemici
-    enemies = [generate_random_position(x_min, x_max, y_min, y_max, ball_radius, previous_enemy_positions) for _ in range(num * 20)]
+    enemies = [generate_random_position(x_min, x_max, y_min, y_max, ball_radius, previous_enemy_positions) for _ in range(num * difficulty)]
 
     # Genera le posizioni per le monete
     coins = [generate_random_position(x_min, x_max, y_min, y_max, ball_radius, previous_coin_positions) for _ in range(1)]
