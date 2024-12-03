@@ -23,6 +23,7 @@ start_position = (quad_x, quad_y)
 
 # Flag che indica se il gioco è stato resettato
 level_started = False
+l = 0
 
 while running:
     screen.fill(WHITE)
@@ -52,24 +53,24 @@ while running:
         continue  # Salta il resto del ciclo se in pausa          
 
     # Gestisce il livello
-    hl = handle_level(livello)
-    if hl is not None:
-        title, start_position, start_area, end_area, total_area, enemies, coins = hl
-        
-        # Solo quando carichi un nuovo livello, aggiorna la posizione di partenza
-        if not level_started:  # Solo la prima volta che carichi il livello
-            quad_x, quad_y = start_position  # Inizializza la posizione del giocatore
-            level_started = True  # Imposta il flag per evitare di resettare la posizione continuamente
-
-    else:  # Fine del gioco
-        screen.fill(WHITE)
-        display_text(victory_text, (screen_width // 2 - victory_text.get_width() // 2, screen_height // 2))
-        pygame.display.flip()
-        pygame.time.wait(3000)
-        livello = show_welcome_screen()  # Ritorna alla home screen per dare all'utente una scelta
-        # Ripristina la posizione del giocatore alla home
-        quad_x, quad_y = start_position
-        level_started = False  # Resetta il flag per il livello successivo
+    if l != livello:
+        hl = handle_level(livello)
+        if hl is not None:
+            title, start_position, start_area, end_area, total_area, enemies, coins = hl
+            l = livello
+            # Solo quando carichi un nuovo livello, aggiorna la posizione di partenza
+            if not level_started:  # Solo la prima volta che carichi il livello
+                quad_x, quad_y = start_position  # Inizializza la posizione del giocatore
+                level_started = True  # Imposta il flag per evitare di resettare la posizione continuamente
+        else:  # Fine del gioco
+            screen.fill(WHITE)
+            display_text(victory_text, (screen_width // 2 - victory_text.get_width() // 2, screen_height // 2))
+            pygame.display.flip()
+            pygame.time.wait(3000)
+            livello = show_welcome_screen()  # Ritorna alla home screen per dare all'utente una scelta
+            # Ripristina la posizione del giocatore alla home
+            quad_x, quad_y = start_position
+            level_started = False  # Resetta il flag per il livello successivo
 
     # Gestione degli input da tastiera
     keys = pygame.key.get_pressed()

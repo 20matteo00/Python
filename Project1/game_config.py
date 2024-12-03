@@ -4,7 +4,7 @@ import pygame
 pygame.init()
 
 # Impostazioni dello schermo
-screen_width, screen_height = 1200, 800
+screen_width, screen_height = 1920, 1080
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("MoscoGame")
 
@@ -19,6 +19,7 @@ BLUE = (0, 0, 255)
 LIGHT_GREEN = (144, 238, 144)
 LIGHT_YELLOW = (255, 255, 87)
 YELLOW = (255, 255, 0)
+ORANGE = (255, 128, 0)
 RED = (255, 0, 0)
 
 # Frasi
@@ -40,7 +41,7 @@ ball_radius = 10
 
 # Dettagli
 speed = 3
-num_levels = 2
+num_levels = 100
 margin = screen_height // 40  # Margine
 margin_top = screen_height // 4 # Margine dall'alto
 
