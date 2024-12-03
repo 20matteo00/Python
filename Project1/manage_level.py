@@ -26,24 +26,17 @@ def level(num):
         (screen_width - margin, screen_height - margin),
         (margin, screen_height - margin),
     ]
-    start_area = [
-        (margin, margin_top),
-        (margin + grandezza_area, margin_top),
-        (margin + grandezza_area, screen_height - margin),
-        (margin, screen_height - margin),
+    safe_area = [
+        (margin + grandezza_area, margin_top + grandezza_area),
+        (screen_width - margin - grandezza_area, margin_top + grandezza_area),
+        (screen_width - margin - grandezza_area, screen_height - margin - grandezza_area),
+        (margin + grandezza_area, screen_height - margin - grandezza_area),
     ]
-    end_area = [
-        (screen_width - margin - grandezza_area, margin_top),
-        (screen_width - margin, margin_top),
-        (screen_width - margin, screen_height - margin),
-        (screen_width - margin - grandezza_area, screen_height - margin),
-    ]
-    
     # Estrai i limiti del rettangolo
     x_min = margin + grandezza_area
-    y_min = margin_top
+    y_min = margin_top + grandezza_area
     x_max = screen_width - margin - grandezza_area
-    y_max = screen_height - margin
+    y_max = screen_height - margin - grandezza_area
 
     # Set per tracciare le posizioni già generate
     previous_enemy_positions = set()
@@ -55,7 +48,7 @@ def level(num):
     # Genera le posizioni per le monete
     coins = [generate_random_position(x_min, x_max, y_min, y_max, ball_radius, previous_coin_positions) for _ in range(1)]
     
-    return title, start_position, start_area, end_area, total_area, enemies, coins
+    return title, start_position, total_area, safe_area, enemies, coins
 
 
 # Gestisce il livello corrente

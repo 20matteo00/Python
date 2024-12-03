@@ -56,7 +56,7 @@ while running:
     if l != livello:
         hl = handle_level(livello)
         if hl is not None:
-            title, start_position, start_area, end_area, total_area, enemies, coins = hl
+            title, start_position, total_area, safe_area, enemies, coins = hl
             l = livello
             # Solo quando carichi un nuovo livello, aggiorna la posizione di partenza
             if not level_started:  # Solo la prima volta che carichi il livello
@@ -94,7 +94,7 @@ while running:
         quad_x, quad_y = limited_position
 
     # Disegna il livello (con la mappa, nemici, ecc.)
-    draw_level(title, start_area, end_area, total_area, enemies, coins)    
+    draw_level(title, total_area, safe_area, enemies, coins)    
     
     # Controlla collisioni
     for enemy in enemies:
@@ -122,7 +122,7 @@ while running:
             hl = handle_level(livello)
             level_win = False
             if hl is not None:
-                title, start_position, start_area, end_area, total_area, enemies, coins = hl
+                title, start_position, total_area, safe_area, enemies, coins = hl
                 # Solo quando carichi un nuovo livello, aggiorna la posizione di partenza
                 quad_x, quad_y = start_position  # Inizializza la posizione del giocatore alla start_position del livello
                 level_started = True  # Imposta il flag per evitare di resettare la posizione continuamente
