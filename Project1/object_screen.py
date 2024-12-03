@@ -70,7 +70,6 @@ def show_level_screen():
         display_text(
             levels_text, (screen_width // 2 - levels_text.get_width() // 2, 50)
         )
-
         # Mostra i livelli in blocchi
         for i in range(1, num_levels + 1):
             # Calcola la posizione del blocco (se i blocchi non devono sovrapporsi)
@@ -88,7 +87,7 @@ def show_level_screen():
 
             # Disegna il bottone
             pygame.draw.rect(screen, BLACK, button_rect)
-            label = font.render(f"Livello {i}", True, WHITE)
+            label = font.render(f"{i}", True, WHITE)
 
             # Calcola la posizione per centrare il testo all'interno del blocco
             x_position = x_pos + (block_width - label.get_width()) // 2
