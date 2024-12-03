@@ -16,10 +16,10 @@ def generate_random_position(x_min, x_max, y_min, y_max, ball_radius, previous_p
             return new_position  # Restituisci la posizione unica
 
 
-# Livello 1
+# Livello
 def level(num):
     title = "Livello " + str(num)
-    start_position = (margin + 50, margin_top + 50)
+    start_position = (margin + grandezza_area//2, margin_top + grandezza_area//2)
     total_area = [
         (margin, margin_top),
         (screen_width - margin, margin_top),

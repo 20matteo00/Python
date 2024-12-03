@@ -133,7 +133,7 @@ def show_level_screen():
 # Disegna un livello
 def draw_level(title, total_area, safe_area, enemies, coins):
     level_text = font.render(title, True, BLACK)
-    display_text(level_text, (screen_width // 2 - level_text.get_width() // 2, 50))
+    display_text(level_text, (screen_width // 2 - level_text.get_width() // 2, margin_top-50))
     if len(total_area) >= 3 or len(safe_area) >= 3:
         pygame.draw.polygon(screen, LIGHT_GREEN, total_area)  # Area totale
         pygame.draw.polygon(screen, WHITE, safe_area)  # Area di arrivo
