@@ -36,7 +36,7 @@ next_text = font.render("Premi Invio per il prossimo livello", True, BLACK)
 victory_text = font.render("Hai completato tutti i livelli!", True, BLACK)
 
 # Dimensioni oggetti
-width_quad = height_quad = 20
+width_quad = height_quad = 10
 ball_radius = 10
 
 # Dettagli
