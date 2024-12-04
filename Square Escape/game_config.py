@@ -23,7 +23,7 @@ ORANGE = (255, 128, 0)
 RED = (255, 0, 0)
 
 # Frasi
-title_text = font.render("Benvenuto in MoscoGame!", True, BLACK)
+title_text = font.render("Benvenuto in Square Game!", True, BLACK)
 per_iniziare = font.render("Premi Invio per iniziare", True, BLACK)
 per_chiudere = font.render("Premi Q per chiudere", True, BLACK)
 levels_text = font.render("Livelli", True, BLACK)
