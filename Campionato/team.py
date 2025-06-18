@@ -3,9 +3,8 @@ class Team:
     """
     Rappresenta una squadra con nome, forza e statistiche di campionato.
     """
-    def __init__(self, name: str, strength: int):
+    def __init__(self, name: str):
         self.name = name
-        self.strength = strength
         self.played = 0
         self.wins = 0
         self.draws = 0

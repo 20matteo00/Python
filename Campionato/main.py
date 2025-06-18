@@ -9,8 +9,7 @@ def main():
     teams = []
     for i in range(1, n+1):
         name = input(f"Nome squadra {i}: ")
-        strength = int(input(f"Forza squadra {i} (1-100): "))
-        teams.append(Team(name, strength))
+        teams.append(Team(name))
 
     calendar = generate_round_robin(teams)
 
