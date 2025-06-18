@@ -37,4 +37,4 @@ def print_calendario(calendar: list[list[Match]]):
     for i, giornata in enumerate(calendar, start=1):
         print(f"\nGiornata {i}")
         for m in giornata:
-            print(f"  - {m.home.name} vs {m.away.name}")
+            print(f"{m.home.name} - {m.away.name}:  {m.home_goals} - {m.away_goals}")

@@ -9,8 +9,8 @@ class Match:
     def __init__(self, home: Team, away: Team):
         self.home = home
         self.away = away
-        self.home_goals = None
-        self.away_goals = None
+        self.home_goals = ''
+        self.away_goals = ''
 
     def __str__(self):
         h = self.home_goals if self.home_goals is not None else '-'
