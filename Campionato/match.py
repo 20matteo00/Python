@@ -1,4 +1,7 @@
 # match.py
+
+from team import Team
+
 class Match:
     """
     Rappresenta una singola partita tra due squadre.
